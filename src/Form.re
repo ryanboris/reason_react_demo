@@ -21,14 +21,14 @@ let reducer = (state, action) => {
 
 [@react.component]
 let make = () => {
-  let targetValue = event => ReactEvent.Form.target(event)##value;
+  let targetValue = event => event->ReactEvent.Form.target##value;
   let (state, dispatch) = React.useReducer(reducer, initialState);
   let handleSubmit = event => {
-    ReactEvent.Synthetic.preventDefault(event);
-    Js.log(state);
+    event->ReactEvent.Synthetic.preventDefault;
+    state->Js.log;
   };
   <div>
-    <form onSubmit={event => handleSubmit(event)}>
+    <form onSubmit={event => event->handleSubmit}>
       <input
         type_="text"
         value={state.name}
