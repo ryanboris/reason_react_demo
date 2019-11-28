@@ -1,0 +1,28 @@
+{
+  "name": "reason_react_demo",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "re:build": "bsb -make-world -clean-world",
+    "re:watch": "bsb -make-world -clean-world -w",
+    "pa:server": "parcel ./public/index.html",
+    "dev": "concurrently 'npm run re:watch' 'npm run pa:server'"
+  },
+  "keywords": [
+    "BuckleScript",
+    "ReasonML",
+    "ReasonReact"
+  ],
+  "author": "RB",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "reason-react": "^0.7.0"
+  },
+  "devDependencies": {
+    "bs-platform": "^5.2.1",
+    "concurrently": "^5.0.0",
+    "parcel-bundler": "^1.12.4"
+  }
+}
